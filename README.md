@@ -34,56 +34,68 @@ This project is a comprehensive Club Management System designed to handle variou
 
 ## Setup
 
-1. 	**Clone the repository:**
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/your-repo/club-management-system.git
    cd club-management-system
    
-2.	**Install dependencies:** Ensure you have Python 3.x installed, and install the necessary packages:
+2. **All dependencies:**
+ Ensure you have Python 3.x installed, and install the necessary packages:
+   ```bash
 	pip install pandas openpyxl
 
-3. 	**Prepare Excel Files:**
-   club_finances.xlsx should include sheets named Revenues and Expenses.
-   club_data.xlsx should include sheets named Members and Attendance_Payments.
-   accounts.xlsx should have user account data.
-4.	**Run the Application:** Start the system by running the main script:
-   python main.py
+4. **Prepare Excel Files:**
+   
+	- club_finances.xlsx should include sheets named Revenues and Expenses.
 
-### Usage
+	- club_data.xlsx should include sheets named Members and Attendance_Payments.
+   
+  	 - accounts.xlsx should have user account data.
+6.	**Run the Application:** Start the system by running the main script:
+   	```bash
+   	python main.py
 
-## Financial Management
+## Usage
 
-	The treasurer can view detailed financial reports and manage unpaid debts through the treasurer menu in the application.
+**Financial Management:**
 
-## Member Management
+The treasurer can view detailed financial reports and manage unpaid debts through the treasurer menu in the application.
 
-	Member and attendance data are managed automatically by the system. The system applies discounts and penalties based on attendance and payment records.
+**Member Management:**
 
-## User Account Management
+Member and attendance data are managed automatically by the system. The system applies discounts and penalties based on attendance and payment records.
 
-	Users can create accounts, log in, and access features based on their role (Member, Coach, or Treasurer).
+**User Account Management:**
 
-### Suggested Workflow
+Users can create accounts, log in, and access features based on their role (Member, Coach, or Treasurer).
 
-## 1.	Login/Account Management:
-	Run the main.py script.
-	Use existing credentials from the accounts data to log in as a Treasurer, Coach, or Member. For example:
-	Treasurer: Username - goldAdam2000, Password - AdamAu09!
-	Coach: Username - IsleAmy45, Password - 416614AI*
-	Member: Username - dSteele416, Password - Steele1998#
-## 2.	Managing Financial Details (Treasurer):
-	Log in as the Treasurer (goldAdam2000).
-	View detailed financial reports, including revenues, expenses, and profits.
-	Manage unpaid debts using the manage_financial_details() function in the financial_management.py.
-## 3. Managing Member Data (Coach):
-	Log in as a Coach (IsleAmy45).
-	The script would typically greet the user and present options related to member management (e.g., applying discounts based on attendance).
-## 4.	Running Financial and Member Operations:
-	Run financial_management.py to generate and save detailed financial reports to club_finances.xlsx.
-	Run member_management.py to apply attendance-based discounts or payment penalties, saving updates to club_data.xlsx.
+## Suggested Workflow
 
-### Future Enhancements
+ **1. Login/Account Management:**
+- Run the main.py script.
+- Use existing credentials from the accounts data to log in as a Treasurer, Coach, or Member. For example:
+  
+Treasurer: Username - goldAdam2000, Password - AdamAu09!
 
-	Web-based UI: A future version could include a web-based interface for easier access and management.
-	Notifications: Integrating email or SMS notifications for unpaid debts or upcoming events.
-	Advanced Reporting: Additional financial and attendance reports with visualizations.
+Coach: Username - IsleAmy45, Password - 416614AI*
+
+Member: Username - dSteele416, Password - Steele1998#
+
+**2. Managing Financial Details (Treasurer):**
+- Log in as the Treasurer (goldAdam2000).
+- View detailed financial reports, including revenues, expenses, and profits.
+- Manage unpaid debts using the manage_financial_details() function in the financial_management.py.
+  
+**3. Managing Member Data (Coach):**
+- Log in as a Coach (IsleAmy45).
+- The script would typically greet the user and present options related to member management (e.g., applying discounts based on attendance).
+  
+**4. Running Financial and Member Operations:**
+- Run financial_management.py to generate and save detailed financial reports to club_finances.xlsx.
+- Run member_management.py to apply attendance-based discounts or payment penalties, saving updates to club_data.xlsx.
+
+## Future Enhancements
+
+- Web-based UI: A future version could include a web-based interface for easier access and management.
+- Notifications: Integrating email or SMS notifications for unpaid debts or upcoming events.
+- Advanced Reporting: Additional financial and attendance reports with visualizations.
