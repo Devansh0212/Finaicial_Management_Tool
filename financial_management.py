@@ -13,7 +13,11 @@ def aggregate_details(df, current_month):
     detailed_df = pd.pivot_table(aggregated_df, values='Amount', index='Month', columns='Category', fill_value=0).reset_index()
     if 'Advance Member Payments' in detailed_df.columns:
         if current_month in detailed_df['Month'].values:
-            detailed_df.loc[detailed_df['Month'] == current_month, 'Members Payments'] += detailed_df.loc[detailed_df['Month'] == current_month, 'Advance Member Payments'].fillna(0)
+            detailed_df.loc[detailed_df['Month'] == current_month, 'Members Payments'] += (
+                detailed_df.loc[detailed_df['Month'] == current_month, 'Advance Member Payments']
+            ).fillna(0)
+        # Remove the advance payments column to avoid double counting in totals
+        detailed_df = detailed_df.drop(columns=['Advance Member Payments'])
     detailed_df['Total'] = detailed_df.sum(axis=1, numeric_only=True)
     return detailed_df
 
